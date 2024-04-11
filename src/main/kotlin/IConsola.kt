@@ -1,5 +1,5 @@
 interface IConsola {
-    fun leerEntero(): Int
-    fun leerCadena(): String
-    fun imprimirInfo()
+    fun pedirOpcion(): Int
+    fun leerCadena()
+    fun imprimirInfo(mensaje: String)
 }
