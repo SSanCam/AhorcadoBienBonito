@@ -1,4 +1,5 @@
 interface IGestorMenu {
+
     // Llamará a la clase que gestiona el menú.
     fun mostrarMenu()
 
@@ -7,4 +8,8 @@ interface IGestorMenu {
 
     // Llamará a la clase encargada de iniciar el juego.
     fun jugarAhorcado()
+
+    // Llamará a la clase que sale del programa.
+    fun salirPrograma()
+
 }

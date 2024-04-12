@@ -1,4 +1,4 @@
-class Consola : IConsola {
+class InfoEntradaSalida : IinfoEntradaSalida {
     override fun pedirOpcion(): Int? {
         try{
             do {
@@ -14,7 +14,7 @@ class Consola : IConsola {
         return null
     }
 
-    override fun leerCadena() {
+    override fun pedirCadena() {
         TODO("Not yet implemented")
     }
 
