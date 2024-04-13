@@ -63,12 +63,7 @@ class GestorGenerarSerie(private var tipo: TipoSerie, private val consola: Conso
 
         for ((index,numero) in rangoFinal.withIndex()){
             sumaFinal += numero
-            serie += serie + numero
-            if (index == 0){
-                numero.toString()
-            } else{
-                serie += "+$numero"
-            }
+            serie += "$numero+"
             consola.imprimirInfo("$serie ($index)" )
         }
         consola.imprimirInfo("Suma => $sumaFinal")
