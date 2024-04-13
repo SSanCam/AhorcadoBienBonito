@@ -1,6 +1,6 @@
 import Utilidades.Consola
 
-class GenerarSerie(private var tipo: TipoSerie, private val consola: Consola) : IGenerarSerie {
+class GestorGenerarSerie(private var tipo: TipoSerie, private val consola: Consola) : IGenerarSerie {
 
     /**
      * Generar rango aleatorio
@@ -64,10 +64,13 @@ class GenerarSerie(private var tipo: TipoSerie, private val consola: Consola) : 
         for ((index,numero) in rangoFinal.withIndex()){
             sumaFinal += numero
             serie += serie + numero
-
-
+            if (index == 0){
+                numero.toString()
+            } else{
+                serie += "+$numero"
+            }
+            consola.imprimirInfo("$serie ($index)" )
         }
-        consola.imprimirInfo("$serie")
         consola.imprimirInfo("Suma => $sumaFinal")
     }
 
